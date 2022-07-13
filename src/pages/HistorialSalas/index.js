@@ -48,7 +48,7 @@ export default function HistorialSalas(){
 
     const getHistorial = async() =>{
         await axios.get('https://backcontrolacceso.herokuapp.com/api/getHistorial')
-        .then(response =>{
+        .then(response =>{  
             setData(response.data)
         })
     }
