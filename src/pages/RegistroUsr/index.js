@@ -188,7 +188,7 @@ export default function Login() {
                             <Button 
 
                                 className = {classes.button}
-                                type = 'submit'
+                                //type = 'submit'
                                 variant = 'contained'
                                 fullWidth
                                 onClick={() => registroUsuario()}
