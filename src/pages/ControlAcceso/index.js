@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Form, } from 'react-bootstrap';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
+import swal from 'sweetalert'
 
 
 const useStyles = makeStyles(theme=>({
@@ -107,6 +108,7 @@ export default function ControlAcceso(){
         .then(response =>{
             if(response.status === 200){
                 console.log('Acceso generado')
+                mostrarAlertaAcceso()
             }
             else if (response.status === 404){
                 console.log('Usuario ya posee acceso previo a la sala y bloque seleccionados')
@@ -123,6 +125,7 @@ export default function ControlAcceso(){
         .then(response =>{
             if(response.status === 200){
                 console.log('Acceso eliminado')
+                mostrarAlertaElim()
             }
             else if (response.status === 404){
                 console.log('No existe dicho acceso de usuario')
@@ -152,6 +155,20 @@ export default function ControlAcceso(){
         getBloques()
         getRuts()
     },[])
+
+    const mostrarAlertaAcceso = () =>{
+        swal({
+            title:'Acceso generado correctamente',
+            icon:'success'
+        })
+    }
+
+    const mostrarAlertaElim = () =>{
+        swal({
+            title:'Acceso denago correctamente',
+            icon:'success'
+        })
+    }
 
     return(
         <div>
