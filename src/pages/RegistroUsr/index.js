@@ -155,6 +155,7 @@ export default function Login() {
                                 required
                                 autoFocus //enfocado en input de usuario
                                 label = 'Nombre'
+                                placeholder='Ingrese nombre y apellido'
                                 onChange={handleChange}
                             />
                             <br/>
@@ -166,7 +167,8 @@ export default function Login() {
                                 fullWidth
                                 required
                                 autoFocus //enfocado en input de usuario
-                                label = 'Rut'  
+                                label = 'Rut' 
+                                placeholder='Ingrese su rut sin puntos ni guion' 
                                 onChange={handleChange}     
                             />
                             <br/>
