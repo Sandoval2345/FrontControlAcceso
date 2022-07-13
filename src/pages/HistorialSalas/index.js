@@ -47,7 +47,7 @@ export default function HistorialSalas(){
     const { logout } = useAuth(); //esta funcion viene de /context/AuthContext
 
     const getHistorial = async() =>{
-        await axios.get('http://localhost:4000/api/getHistorial')
+        await axios.get('https://backcontrolacceso.herokuapp.com/api/getHistorial')
         .then(response =>{
             setData(response.data)
         })

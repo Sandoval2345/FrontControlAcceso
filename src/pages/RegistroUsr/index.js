@@ -85,7 +85,7 @@ export default function Login() {
 
     const registroUsuario = async () =>{
         console.log(regUsr)
-        await axios.post('http://localhost:4000/api/registrarUsuario',regUsr)
+        await axios.post('https://backcontrolacceso.herokuapp.com/api/registrarUsuario',regUsr)
         .then(response =>{
             console.log(response.status)
             if (response.status === 200){

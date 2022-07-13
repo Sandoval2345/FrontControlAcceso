@@ -78,7 +78,7 @@ export default function ControlAcceso(){
     const [bloqueSeleccionado, setBloqueSeleccionado] = useState(null)
 
     const getSalas = async () =>{
-        await axios.get('http://localhost:4000/api/getSalas')
+        await axios.get('https://backcontrolacceso.herokuapp.com/api/getSalas')
         .then(response =>{
             //console.log(response)
             setSalas(response.data)
@@ -87,7 +87,7 @@ export default function ControlAcceso(){
     }
 
     const getBloques = async () =>{
-        await axios.get('http://localhost:4000/api/getBloques')
+        await axios.get('https://backcontrolacceso.herokuapp.com/api/getBloques')
         .then(response =>{
             setBloques(response.data)
         })
@@ -95,7 +95,7 @@ export default function ControlAcceso(){
     }
 
     const getRuts = async () =>{
-        await axios.get('http://localhost:4000/api/getRuts')
+        await axios.get('https://backcontrolacceso.herokuapp.com/api/getRuts')
         .then(response =>{
             setRuts(response.data)
         })
@@ -103,7 +103,7 @@ export default function ControlAcceso(){
     }
     
     const darAcceso = async () =>{
-        await axios.post ('http://localhost:4000/api/darAcceso', {sala: salaSeleccionada, bloque: bloqueSeleccionado, rut: rutSeleccionado})
+        await axios.post ('https://backcontrolacceso.herokuapp.com/api/darAcceso', {sala: salaSeleccionada, bloque: bloqueSeleccionado, rut: rutSeleccionado})
         .then(response =>{
             if(response.status === 200){
                 console.log('Acceso generado')
@@ -119,7 +119,7 @@ export default function ControlAcceso(){
 
 
     const rechazarAcceso = async () =>{
-        await axios.post ('http://localhost:4000/api/delAcceso', {sala: salaSeleccionada, bloque: bloqueSeleccionado, rut: rutSeleccionado})
+        await axios.post ('https://backcontrolacceso.herokuapp.com/api/delAcceso', {sala: salaSeleccionada, bloque: bloqueSeleccionado, rut: rutSeleccionado})
         .then(response =>{
             if(response.status === 200){
                 console.log('Acceso eliminado')
