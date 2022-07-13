@@ -109,6 +109,7 @@ export default function ControlAcceso(){
             if(response.status === 200){
                 console.log('Acceso generado')
                 mostrarAlertaAcceso()
+                setTimeout(() =>  {window.location.reload(false)}, 2000);
             }
             else if (response.status === 404){
                 console.log('Usuario ya posee acceso previo a la sala y bloque seleccionados')
@@ -126,6 +127,7 @@ export default function ControlAcceso(){
             if(response.status === 200){
                 console.log('Acceso eliminado')
                 mostrarAlertaElim()
+                setTimeout(() =>  {window.location.reload(false)}, 2000);
             }
             else if (response.status === 404){
                 console.log('No existe dicho acceso de usuario')
@@ -165,7 +167,7 @@ export default function ControlAcceso(){
 
     const mostrarAlertaElim = () =>{
         swal({
-            title:'Acceso denago correctamente',
+            title:'Acceso denegado correctamente',
             icon:'success'
         })
     }

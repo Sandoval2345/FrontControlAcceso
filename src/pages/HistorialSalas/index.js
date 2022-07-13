@@ -138,7 +138,7 @@ export default function HistorialSalas(){
                                         <TableCell align = 'center' style={{color:'white'}}>{historial.dia}</TableCell>
                                         <TableCell align = 'center' style={{color:'white'}}>{historial.bloque}</TableCell>
                                         <TableCell align = 'center' style={{color:'white'}}>{historial.sala}</TableCell>
-                                        <TableCell align = 'center' style={{color:'white'}}>{new Date(historial.fecha_acceso).toLocaleString('es-CL',{timeZone: 'America/Santiago'})}</TableCell>
+                                        <TableCell align = 'center' style={{color:'white'}}>{new Date(historial.fecha_acceso)}</TableCell>
                                         <TableCell align = 'center' style={{color:'white'}}>{historial.acceso}</TableCell>
                                     </TableRow>
                                 ))}
